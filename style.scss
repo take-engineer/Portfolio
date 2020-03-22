@@ -694,13 +694,6 @@ ol {
   }
 }
 
-.js-animate {
-  opacity: 0;
-  &.animated {
-    opacity: 1;
-  }
-}
-
 .floating {
   position: fixed;
   right: 3%;
@@ -730,4 +723,74 @@ ol {
       }
     }
   }
+}
+
+
+// アニメーション
+.js-animate {
+  opacity: 0;
+}
+
+.js-fade-in.is-active{
+	animation: .8s ease 0s normal forwards ani-fade-in;
+}
+@keyframes ani-fade-in{
+	0% {
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.js-slide-right.is-active{
+	animation: .8s ease 0s normal forwards ani-slide-right;
+}
+@keyframes ani-slide-right{
+	0% {
+		transform: translateX(-30px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+.js-slide-left.is-active{
+	animation: .8s ease 0s normal forwards ani-slide-left;
+}
+@keyframes ani-slide-left{
+	0% {
+		transform: translateX(30px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+.js-slide-up.is-active{
+	animation: .8s ease 0s normal forwards ani-slide-up;
+}
+@keyframes ani-slide-up{
+	0% {
+		transform: translateY(30px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+.js-slide-down.is-active{
+	animation: .8s ease 0s normal forwards ani-slide-down;
+}
+@keyframes ani-slide-down{
+	0% {
+		transform: translateY(-30px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateX(0);
+		opacity: 1;
+	}
 }
